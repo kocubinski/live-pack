@@ -1,0 +1,4 @@
+(:name processing2-emacs
+       :description "Processing 2 major-mode for Emacs"
+       :type git
+       :url "https://github.com/ptrv/processing2-emacs.git")
