@@ -26,6 +26,7 @@
 
 (evil-mode 1)
 
+;; processing-mode
 (autoload 'processing-mode "processing-mode" "Processing mode" t)
 (add-to-list 'auto-mode-alist '("\\.pde$" . processing-mode))
 
@@ -33,5 +34,24 @@
 (setq processing-application-dir "C:/binski/apps/processing-2.2.1/processing.exe")
 (setq processing-sketchbook-dir "C:/Users/Matt/Documents/Processing")
 
+(autoload 'processing-snippets-initialize "processing-snippets" nil nil nil)
+(eval-after-load 'yasnippet '(processing-snippets-initialize))
+
+(defun processing-mode-init ()
+  (make-local-variable 'ac-sources)
+  (setq ac-sources '(ac-source-dictionary ac-source-yasnippet))
+  (make-local-variable 'ac-user-dictionary)
+  (setq ac-user-dictionary (append processing-functions
+                                   processing-builtins
+                                   processing-constants)))
+
+(add-to-list 'ac-modes 'processing-mode)
+(add-hook 'processing-mode-hook 'processing-mode-init)
+
 ;; display
 (set-face-attribute 'default nil :font "Consolas-11")
+(blink-cursor-mode -1)
+
+;; keybinds
+(global-set-key [(f10)] 'ido-switch-buffer)
+(global-set-key (kbd "C-,") 'other-window)
