@@ -15,6 +15,9 @@
                 processing2-emacs
                 skewer-mode
                 simple-httpd
+                color-theme-zenburn
+                monokai-emacs
+                color-theme-lush
                 tern)))
 
 (el-get 'sync my-packages)
