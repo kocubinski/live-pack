@@ -13,11 +13,15 @@
 (setq my-packages
       (append '(evil
                 processing2-emacs
-                skewer-mode
-                simple-httpd
+                ;; colors
                 color-theme-zenburn
                 monokai-emacs
                 color-theme-lush
-                tern)))
+                ;; javascript
+                simple-httpd
+                skewer-mode
+                tern
+                js-comint
+                )))
 
 (el-get 'sync my-packages)
