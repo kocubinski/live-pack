@@ -9,5 +9,6 @@
 (live-load-config-file "processing.el")
 (live-load-config-file "display.el")
 (live-load-config-file "javascript.el")
+(live-load-config-file "clojure.el")
 
 (evil-mode 1)

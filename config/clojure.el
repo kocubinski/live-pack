@@ -17,3 +17,8 @@
     (insert "(require 'figwheel-sidecar.repl-api)
              (figwheel-sidecar.repl-api/cljs-repl)")
     (cider-repl-return)))
+
+(defun lisp-bindings ()
+  (interactive)
+  (local-set-key (kbd "C-M-x") 'lisp-eval-defun)
+  (local-set-key (kbd "C-c C-r") 'lisp-eval-region))
