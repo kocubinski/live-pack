@@ -10,6 +10,8 @@
 
 (add-to-list 'el-get-recipe-path (concat (live-pack-lib-dir) "recipes"))
 
+
+
 (setq my-packages
       (append '(evil
                 processing2-emacs
@@ -22,6 +24,8 @@
                 skewer-mode
                 tern
                 js-comint
+                ;; org
+                org2blog
                 )))
 
 (el-get 'sync my-packages)

@@ -4,6 +4,7 @@
 ;; See README for more information.
 
 ;; Load bindings config
+(live-load-config-file "org2blog.el")
 (live-load-config-file "packages.el")
 (live-load-config-file "bindings.el")
 (live-load-config-file "processing.el")
@@ -12,3 +13,4 @@
 (live-load-config-file "clojure.el")
 
 (evil-mode 1)
+(setq org-log-done 'time)

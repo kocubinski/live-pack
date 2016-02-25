@@ -3,3 +3,6 @@
  '(ispell-program-name "C:\\Program Files (x86)\\Aspell\\bin\\aspell.exe"))
 
 (add-to-list 'ispell-dictionary-alist '("C:\\Program Files (x86)\\Aspell\\dict"))
+
+(setq org-todo-keywords
+       '((sequence "TODO" "FEEDBACK" "VERIFY" "|" "DONE" "DELEGATED")))
